@@ -1,0 +1,105 @@
+.menu_wrapper {
+    position: fixed;
+    left: 91%;
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "email image options logo";
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu {
+    padding: 7px;
+    align-self: center;
+    font-size: 0.8em;
+}
+.gmail .menu {grid-area: email;}
+.images .menu {grid-area: image;}
+.options .menu {grid-area: options;}
+.logo .menu {grid-area: logo;}
+/* Menu styling ends here */
+
+/* Search box styling starts here */
+.search_holder {
+    display: grid;
+    grid-template-columns: 3em 1fr 3em;
+    grid-template-rows: auto;
+    grid-template-areas: "magnifier searcher mic";
+    border-radius: 2.5em;
+    border: 1px solid hsla(0, 0%, 18%, 0.2);
+    height: 2.6em;
+    width: 30em;
+}
+.searcher {
+    grid-area: searcher;
+    border: none;
+    height: 100%;
+    width: auto;
+    line-height: 90%;
+    font-size: 1.2em;
+}
+.searcher_magnifier {
+    grid-area: magnifier;
+    align-self: center;
+    justify-self: center;
+}
+.searcher:focus {
+    outline: none;
+}
+.searcher:active {
+    outline: none;
+}
+.searcher_mic {
+    grid-area: mic;
+    align-self: center;
+    justify-self: center;
+}
+/* Search box styling ends here */
+
+/* Options styling starts here */
+.options_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 9em);
+    grid-auto-rows: 2em;
+    grid-template-areas: "search first";
+    grid-gap: 0.8em;
+}
+button.option {
+    border: 1px solid hsla(0, 0%, 36%, 0.05);
+    border-radius: 0.2em;
+    color: hsla(0, 0%, 36%, 1.0);
+}
+button.search {
+    grid-area: search;
+}
+button.first {
+    grid-area: first;
+}
+div.lang {
+    font-size: 0.8em;
+}
+/* Options styling ends here */
+
+/* Main positioning styling starts here */
+.main_wrapper {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-rows: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    row-gap: 1.8em;
+    padding-top: 12em;
+}
+img.logo {
+    display: table;
+    margin: auto;
+    margin-bottom: 2em;
+}
+.options_wrapper {
+    justify-content: center;
+}
+.lang {
+    text-align: center;
+}
+/* Grid layout styling for main ends here */
